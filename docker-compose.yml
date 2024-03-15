@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  tentime.administrationservice.httpapi.host:
+    image: ${DOCKER_REGISTRY-}tentimeadministrationservicehttpapihost
+    build:
+      context: .
+      dockerfile: src/TenTime.AdministrationService.HttpApi.Host/Dockerfile
+    network_mode: "host"

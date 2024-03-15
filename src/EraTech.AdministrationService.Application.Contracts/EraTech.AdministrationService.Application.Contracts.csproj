@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>EraTech.AdministrationService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EraTech.AspNetCore.Themes.Localization" Version="1.0.1" />
+    <PackageReference Include="EraTech.NotificationService.Application.Contracts" Version="1.0.2" />
+    <PackageReference Include="EraTech.StorageService.Application.Contracts" Version="1.0.1" />
+    <PackageReference Include="Volo.Abp.Authorization" Version="8.0.4" />
+	<PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="8.0.4" />
+	<PackageReference Include="Volo.Abp.FeatureManagement.Application.Contracts" Version="8.0.4" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="8.0.4" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Application.Contracts" Version="8.0.4" />
+	</ItemGroup>
+	<ItemGroup>
+
+	  <ProjectReference Include="..\EraTech.AdministrationService.Domain.Shared\EraTech.AdministrationService.Domain.Shared.csproj" />
+	</ItemGroup>
+
+</Project>

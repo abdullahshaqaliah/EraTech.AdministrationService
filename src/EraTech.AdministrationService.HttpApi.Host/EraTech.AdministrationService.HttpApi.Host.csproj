@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>EraTech.AdministrationService</RootNamespace>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <UserSecretsId>265d7e37-622f-4d47-bcc2-c5241362a4a3</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+	<ItemGroup>
+
+		<PackageReference Include="EraTech.Shared.Hosting.Settings.Microservices" Version="1.0.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="8.0.4" />
+		<PackageReference Include="Volo.Abp.Identity.HttpApi.Client" Version="8.0.4" />
+    <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="8.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\..\src\EraTech.AdministrationService.HttpApi\EraTech.AdministrationService.HttpApi.csproj" />
+    <ProjectReference Include="..\..\src\EraTech.AdministrationService.Application\EraTech.AdministrationService.Application.csproj" />
+    <ProjectReference Include="..\..\src\EraTech.AdministrationService.EntityFrameworkCore\EraTech.AdministrationService.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logs\**" />
+    <Content Remove="Logs\**" />
+    <EmbeddedResource Remove="Logs\**" />
+    <None Remove="Logs\**" />
+  </ItemGroup>
+
+</Project>
